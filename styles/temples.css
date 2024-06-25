@@ -69,7 +69,7 @@ h1 {
 
 .navigation a:hover,
 .navigation a.active {
-    background-color: #9575CD;
+    background-color: #fbfbfb;
     color: #333;
     font-weight: 700;
 }
