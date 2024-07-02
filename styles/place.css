@@ -46,6 +46,23 @@ header {
     width: 100%;
 }
 
+main::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+main::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: var(--primary-color);
+    width: 100%;
+    margin-top: 1rem;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -95,4 +112,12 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 2rem;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .weather-icon-wrapper img {
+        display: block;
+        margin: 0 auto;
+    }
 }

@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const currentYear = new Date().getFullYear();
-
     const lastModified = document.lastModified;
 
     document.getElementById('currentYear').textContent = currentYear;
-
     document.getElementById('lastModified').textContent = lastModified;
 });
 
@@ -20,7 +18,6 @@ function calculateWindChill(temp, wind) {
     ).toFixed(2);
 }
 
-
 function displayWindChill() {
     const weatherSection = document.querySelector(".weather");
     const windChillElement = document.createElement("p");
@@ -34,7 +31,6 @@ function displayWindChill() {
 
     weatherSection.appendChild(windChillElement);
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
     displayWindChill();
