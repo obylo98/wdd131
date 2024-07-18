@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Product Review Form">
+    <meta name="author" content="Andrew Obinna Onyekwere">
+    <link rel="stylesheet" href="styles/form.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="styles/form-large.css" media="screen and (min-width: 769px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto&display=swap"
+        rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Product Review</h1>
+        <form id="review-form" action="review.html" method="get">
+            <label for="product-name">Product Name</label>
+            <select id="product-name" name="product-name" required>
+                <option value="" disabled selected>Choose a Product ...</option>
+            </select>
+
+            <label for="rating">Overall Rating</label>
+            <div id="rating">
+                <input type="radio" id="star1" name="rating" value="1" required>
+                <label for="star1">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2" required>
+                <label for="star2">&#9733;&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3" required>
+                <label for="star3">&#9733;&#9733;&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4" required>
+                <label for="star4">&#9733;&#9733;&#9733;&#9733;</label>
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5">&#9733;&#9733;&#9733;&#9733;&#9733;</label>
+            </div>
+
+            <label for="installation-date">Date of Installation</label>
+            <input type="date" id="installation-date" name="installation-date" required>
+
+            <label for="features">Which features did you find useful in the product? <small>(Check all that
+                    apply)</small></label>
+            <div id="features">
+                <input type="checkbox" id="feature1" name="features" value="Durability">
+                <label for="feature1">Durability</label>
+                <input type="checkbox" id="feature2" name="features" value="Ease of Use">
+                <label for="feature2">Ease of Use</label>
+                <input type="checkbox" id="feature3" name="features" value="Performance">
+                <label for="feature3">Performance</label>
+                <input type="checkbox" id="feature4" name="features" value="Design">
+                <label for="feature4">Design</label>
+            </div>
+
+            <label for="review">Written Review <small>(Optional)</small></label>
+            <textarea id="review" name="review"></textarea>
+
+            <label for="username">Your Name <small>(Optional)</small></label>
+            <input type="text" id="username" name="username">
+
+            <input type="submit" value="Post Review">
+        </form>
+
+        <footer>
+            <p>&copy; <span id="currentYear"></span> <span class="highlight">Andrew Obinna Onyekwere</span> &#x1F338;
+                Nigeria </p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </footer>
+    </div>
+</body>
+
+</html>
