@@ -4,8 +4,8 @@
     --secondary-color: #ffffff;
     /* White */
     --accent-color: #ff5722;
-    --background-color: #849291;
-    --text-color: #000000;
+    --background-color: #E9FFC9;
+    --text-color: #0C0808;
     --header-background: #124f53;
 
     --font-primary: 'Poppins', sans-serif;
@@ -30,7 +30,7 @@ body {
 h1,
 h2,
 h3 {
-    color: var(--primary-color);
+    color: var(--text-color);
     font-family: var(--font-secondary);
     font-optical-sizing: auto;
 }
@@ -128,6 +128,7 @@ nav ul.active li a {
 .hero-text h1 {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: var(--secondary-color);
 }
 
 .hero-text p {
@@ -214,7 +215,7 @@ nav ul.active li a {
 .testimonial-item h3 {
     font-size: 1.25rem;
     margin: 0;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .testimonial-item:hover {
@@ -289,7 +290,7 @@ nav ul.active li a {
 }
 
 .social-links a {
-    color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
 }

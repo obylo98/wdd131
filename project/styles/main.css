@@ -1,23 +1,21 @@
 /* Define CSS variables */
 :root {
-    --primary-color: #ffffff;
-    /* Example: Blue */
+    --primary-color: #000000;
+    
     --secondary-color: #ffffff;
     /* White */
     --accent-color: #ff5722;
-    /* Example: Deep Orange */
-    --background-color: #849291;
+
+    --background-color: #E9FFC9;
    
     --text-color: #000000;
  
     --header-background: #124f53;
-    /* Dark Gray */
 
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Playfair Display', serif;
 }
 
-/* Common styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -99,10 +97,12 @@ nav ul li a {
 .hero-text h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    color: var(--secondary-color);
 }
 
 .hero-text p {
     font-size: 1.5rem;
+    
 }
 
 /* Works section styles */
