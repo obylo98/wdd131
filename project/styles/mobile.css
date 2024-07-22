@@ -271,7 +271,7 @@ nav ul.active li a {
 
 .contact-form button {
     padding: 10px 20px;
-    background-color: var(--primary-color);
+    background-color: var(--text-color);
     color: var(--secondary-color);
     border: none;
     border-radius: 5px;
