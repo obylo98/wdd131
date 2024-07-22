@@ -1,0 +1,98 @@
+/* Header styles for mobile */
+header {
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-right: auto;
+}
+
+nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px; /* Adjust according to the header height */
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul.active {
+    display: flex;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+}
+
+/* Hero section styles for mobile */
+.hero {
+    padding: 0;
+    height: calc(100vh - 60px); /* Adjust according to the header height */
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+}
+
+/* Works section styles for mobile */
+.works-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.work-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+/* Contact section styles */
+.contact-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form {
+    width: 100%;
+    text-align: center;
+}
+
+.form-row {
+    flex-direction: column;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
