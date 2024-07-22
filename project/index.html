@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AoTech Porfolio</title>
-    <meta name="description" content="AoTech Porfolio">
+    <title>AoTech Portfolio</title>
+    <meta name="description" content="AoTech Portfolio">
     <meta name="author" content="Andrew Obinna Onyekwere">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css" media="screen and (min-width: 769px)">
     <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 768px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,24 +20,29 @@
 <body>
     <header>
         <div class="logo">Logo</div>
-        <nav>
+        <button id="menu" class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <nav class="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Andrew, A Web Developer</h1>
-            <p>I design and build digital products that people love to use</p>
+        <picture>
+            <source srcset="images/hero.webp" media="(min-width: 769px)">
+            <source srcset="images/hero.webp" media="(max-width: 768px)">
+            <img src="images/hero.webp" alt="hero">
+        </picture>
+        <div class="hero-text">
+            <h1>Welcome to AoTech Portfolio</h1>
+            <p>Creating modern and responsive web applications</p>
         </div>
     </section>
 
@@ -68,9 +73,9 @@
                 <img src="images/work6.webp" alt="Work 6" loading="lazy">
                 <h3>Project 6</h3>
             </div>
-            <!-- Add more work items as needed -->
         </div>
     </section>
+
     <section class="testimonials">
         <h2>Testimonials</h2>
         <div class="testimonials-grid">
@@ -89,10 +94,9 @@
                 <p>"Andrew's creativity and technical expertise are unmatched. I highly recommend him."</p>
                 <h3>Emily Johnson</h3>
             </div>
-            <!-- Add more testimonials as needed -->
         </div>
     </section>
-    <!-- Other sections will go here -->
+
     <section class="contact">
         <h2>Contact Me</h2>
         <div class="contact-container">
@@ -121,8 +125,6 @@
             </div>
         </div>
     </section>
-
-    <script src="scripts.js" defer></script>
 </body>
 
 </html>

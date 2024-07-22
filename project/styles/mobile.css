@@ -1,98 +1,299 @@
-/* Header styles for mobile */
+/* Define CSS variables */
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #ffffff;
+    /* White */
+    --accent-color: #ff5722;
+    --background-color: #849291;
+    --text-color: #000000;
+    --header-background: #124f53;
+
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+}
+
+/* Common styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+    font-family: var(--font-secondary);
+    font-optical-sizing: auto;
+}
+
+/* Header styles */
 header {
-    justify-content: space-between;
+    background-color: var(--header-background);
+    color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
 }
 
 header .logo {
-    margin-right: auto;
+    display: inline-block;
+    margin-right: 10px;
 }
 
-nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: #333;
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: var(--secondary-color);
     position: absolute;
-    top: 60px; /* Adjust according to the header height */
-    right: 0;
-    width: 100%;
-    text-align: center;
-}
-
-nav ul.active {
-    display: flex;
-}
-
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 20px;
+    top: 1rem;
+    right: 1rem;
     cursor: pointer;
 }
 
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 2px 0;
+#menu::before {
+    content: "☰";
 }
 
-/* Hero section styles for mobile */
-.hero {
+#menu.open::before {
+    content: "❎";
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: var(--header-background);
     padding: 0;
-    height: calc(100vh - 60px); /* Adjust according to the header height */
 }
 
-.hero-content h1 {
+nav ul li a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #fbfbfb;
+    color: #333;
+    font-weight: 700;
+}
+
+nav ul.active li a {
+    display: block;
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.hero-text h1 {
     font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.hero-content p {
+.hero-text p {
     font-size: 1rem;
 }
 
-/* Works section styles for mobile */
+/* Works section styles */
+.works {
+    padding: 60px 20px;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.works h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
 .works-grid {
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 20px;
 }
 
 .work-item {
-    background-color: #fff;
+    background-color: var(--secondary-color);
     border: 1px solid #ddd;
     padding: 10px;
     transition: transform 0.3s;
 }
 
+.work-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.work-item h3 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.work-item:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonials section styles */
+.testimonials {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.testimonial-item {
+    background-color: var(--secondary-color);
+    border: 1px solid #ddd;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.testimonial-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.testimonial-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-item h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.testimonial-item:hover {
+    transform: scale(1.05);
+}
+
 /* Contact section styles */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
 .contact-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .contact-form {
+    max-width: 500px;
     width: 100%;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
-.form-row {
+.contact-form .form-row {
+    display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
-.form-group {
+.contact-form .form-group {
     width: 100%;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 .contact-form button {
-    width: 100%;
-    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
 }
 
 .social-links {
-    margin-top: 20px;
-    text-align: center;
+    display: flex;
+    gap: 10px;
 }
 
 .social-links a {
-    margin: 0 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #0056b3;
 }
