@@ -65,13 +65,22 @@ nav ul li a {
     color: var(--secondary-color);
     text-decoration: none;
 }
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #fbfbfb;
+    color: #333;
+    font-weight: 700;
+}
 
-/* Hide hamburger menu on desktop */
+nav ul.active li a {
+    display: block;
+}
+
 .hamburger {
     display: none;
 }
 
-/* Hero section styles */
+
 .hero {
     position: relative;
     height: 100vh;
@@ -146,7 +155,7 @@ nav ul li a {
     transform: scale(1.05);
 }
 
-/* Testimonials section styles */
+
 .testimonials {
     padding: 60px 20px;
     text-align: center;
